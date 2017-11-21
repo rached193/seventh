@@ -7,6 +7,8 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 /* Angular Material */
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 /* Core */
 import {BrowserModule} from '@angular/platform-browser';
@@ -16,7 +18,7 @@ import {RoutingModule} from './/app-routing.module';
 import {environment} from "../environments/environment";
 
 /* Componentes */
-import {AppComponent} from './app.component';
+import {AppComponent} from './app.root.component';
 import {AppNavbarComponent} from './app-navbar/app-navbar.component';
 import {CoursesListComponent} from './courser-list/courser-list.component';
 
@@ -40,6 +42,8 @@ console.log(environment.firebase);
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
     RoutingModule
   ],
   providers: [],
