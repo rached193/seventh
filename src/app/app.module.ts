@@ -18,21 +18,23 @@ import {RoutingModule} from './/app-routing.module';
 import {environment} from "../environments/environment";
 
 /* Componentes */
-import {AppComponent} from './app.root.component';
+import {AppComponent} from './root.component';
 import {AppNavbarComponent} from './app-navbar/app-navbar.component';
 import {CoursesListComponent} from './courser-list/courser-list.component';
 
 import {CreateCharacterComponent} from './create-character/create-character.component';
+import {HomeComponent} from './home/home.component';
+import {PersonajesComponent} from './personajes/personajes.component';
 
-
-console.log(environment.firebase);
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavbarComponent,
     CoursesListComponent,
-    CreateCharacterComponent
+    CreateCharacterComponent,
+    HomeComponent,
+    PersonajesComponent
   ],
   imports: [
     RoutingModule,

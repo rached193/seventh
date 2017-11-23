@@ -2,13 +2,9 @@
 
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-
-
-.menu-nav{
-  flex: 1 1 auto;
+body {
+  margin: 0px;
+  font-family: Verdana,sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
 }
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
-}
-
