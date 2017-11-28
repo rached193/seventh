@@ -2,7 +2,6 @@
 @tablet: ~"only screen and (min-width: 530px) and (max-width: 949px)";
 
 .landing {
-  display:flex;
   height: 600px;
   width: 100%;
   background: #fff url("/assets/seventh_sea_pirate_logo.jpg") no-repeat center center;
@@ -13,13 +12,33 @@
     height: auto;
   }
 
-  img {
-    display: block;
-    margin: auto;
-    max-width: 100%;
-  }
-}
+  .landing-img {
+    height: 600px;
+    width: 100%;
+    text-align: right;
 
+    @media @mobile {
+      height: auto;
+    }
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      padding: 100px;
+
+      @media @tablet {
+        padding: 30px;
+      }
+
+      @media @mobile {
+        padding: 50px 0 0 0;
+      }
+
+    }
+
+  }
+
+}
 
 .footer {
   background-color: #292c2f;
