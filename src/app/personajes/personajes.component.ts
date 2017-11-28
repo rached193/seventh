@@ -7,17 +7,20 @@ import {Component, OnInit} from '@angular/core';
 })
 export class PersonajesComponent implements OnInit {
   listado: object[];
+  Arr = Array;
 
   constructor() {
     this.listado = [{
       basica: {
-        Jugador: "Junior",
-        Concepto: "",
-        Personaje: "Von Caster",
-        Nacion: "Eisen",
-        Religion: "Objetivista",
-        Reputacion: 0
+        jugador: "Junior",
+        concepto: "",
+        personaje: "Von Caster",
+        nacion: "Eisen",
+        religion: "Objetivista",
+        reputacion: 0,
+        riqueza: 0,
       },
+      historia: "Cazador de Mounstruos profesional, al servicio de un principe del Hierro. Superviviente  de la Guerra de la Cruz",
       caracteristicas: {
         musculo: 4,
         manya: 3,
@@ -36,13 +39,15 @@ export class PersonajesComponent implements OnInit {
 
     }, {
       basica: {
-        Jugador: "Junior",
-        Concepto: "",
-        Personaje: "Van Caster",
-        Nacion: "Eisen",
-        Religion: "Objetivista",
-        Reputacion: 0
+        jugador: "Junior",
+        concepto: "",
+        personaje: "Von Caster",
+        nacion: "Eisen",
+        religion: "Objetivista",
+        reputacion: 0,
+        riqueza: 0,
       },
+      historia: "Cazador de Mounstruos profesional, al servicio de un principe del Hierro. Superviviente  de la Guerra de la Cruz",
       caracteristicas: {
         musculo: 4,
         manya: 3,
@@ -61,13 +66,15 @@ export class PersonajesComponent implements OnInit {
 
     }, {
       basica: {
-        Jugador: "Junior",
-        Concepto: "",
-        Personaje: "Van Caster",
-        Nacion: "Eisen",
-        Religion: "Objetivista",
-        Reputacion: 0
+        jugador: "Junior",
+        concepto: "",
+        personaje: "Von Caster",
+        nacion: "Eisen",
+        religion: "Objetivista",
+        reputacion: 0,
+        riqueza: 0,
       },
+      historia: "Cazador de Mounstruos profesional, al servicio de un principe del Hierro. Superviviente  de la Guerra de la Cruz",
       caracteristicas: {
         musculo: 4,
         manya: 3,

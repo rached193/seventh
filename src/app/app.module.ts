@@ -17,6 +17,9 @@ import {RoutingModule} from './/app-routing.module';
 
 import {environment} from "../environments/environment";
 
+/* Pipes */
+import {KeysPipe} from './app-navbar/forKey';
+
 /* Componentes */
 import {AppComponent} from './root.component';
 import {AppNavbarComponent} from './app-navbar/app-navbar.component';
@@ -30,6 +33,7 @@ import {PersonajesComponent} from './personajes/personajes.component';
 @NgModule({
   declarations: [
     AppComponent,
+    KeysPipe,
     AppNavbarComponent,
     CoursesListComponent,
     CreateCharacterComponent,

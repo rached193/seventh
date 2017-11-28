@@ -1,14 +1,36 @@
+
 .ficha {
-  background-color: #333333 ;
-  color: #fff;
+  display: flex;
+  width: 100%;
   margin-top: 24px;
-  display: table;
+
+  background-color: #333333;
+  color: #fff;
+
+  border-radius: 1%;
+  border: 8px solid #6e6d51;
+  box-sizing: border-box;
+
+  @media (max-width : 701px) {
+    flex-direction: column;
+  }
 
   .quarter {
     float: left;
     width: 100%;
-    @media (min-width: 601px) {
-      width: 24.99999%;
+    //border: 1px solid red;
+    text-align: center;
+
+
+
+    .quarter-content {
+      margin: 10px 2px;
+    }
+
+
+
+    h2 {
+      //border: 1px solid red;
     }
   }
 }
