@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {AngularFireDatabase} from 'angularfire2/database';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-personajes',
@@ -6,96 +8,20 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./personajes.component.less']
 })
 export class PersonajesComponent implements OnInit {
+  charactersObservable: Observable<any[]>;
+
   listado: object[];
   Arr = Array;
 
-  constructor() {
-    this.listado = [{
-      basica: {
-        jugador: "Junior",
-        concepto: "",
-        personaje: "Von Caster",
-        nacion: "Eisen",
-        religion: "Objetivista",
-        reputacion: 0,
-        riqueza: 0,
-      },
-      historia: "Cazador de Mounstruos profesional, al servicio de un principe del Hierro. Superviviente  de la Guerra de la Cruz",
-      caracteristicas: {
-        musculo: 4,
-        manya: 3,
-        brio: 2,
-        ingenio: 2,
-        donaire: 3
-      },
-      habilidades: {
-        armas: 3,
-        atletismo: 2,
-        equitacion: 2,
-        intimidar: 2,
-        pelear: 3,
-        percepcion: 2
-      }
-
-    }, {
-      basica: {
-        jugador: "Junior",
-        concepto: "",
-        personaje: "Von Caster",
-        nacion: "Eisen",
-        religion: "Objetivista",
-        reputacion: 0,
-        riqueza: 0,
-      },
-      historia: "Cazador de Mounstruos profesional, al servicio de un principe del Hierro. Superviviente  de la Guerra de la Cruz",
-      caracteristicas: {
-        musculo: 4,
-        manya: 3,
-        brio: 2,
-        ingenio: 2,
-        donaire: 3
-      },
-      habilidades: {
-        armas: 3,
-        atletismo: 2,
-        equitacion: 2,
-        intimidar: 2,
-        pelear: 3,
-        percepcion: 2
-      }
-
-    }, {
-      basica: {
-        jugador: "Junior",
-        concepto: "",
-        personaje: "Von Caster",
-        nacion: "Eisen",
-        religion: "Objetivista",
-        reputacion: 0,
-        riqueza: 0,
-      },
-      historia: "Cazador de Mounstruos profesional, al servicio de un principe del Hierro. Superviviente  de la Guerra de la Cruz",
-      caracteristicas: {
-        musculo: 4,
-        manya: 3,
-        brio: 2,
-        ingenio: 2,
-        donaire: 3
-      },
-      habilidades: {
-        armas: 3,
-        atletismo: 2,
-        equitacion: 2,
-        intimidar: 2,
-        pelear: 3,
-        percepcion: 2
-      }
-
-    }]
-
+  constructor(private db: AngularFireDatabase) {
+    this.charactersObservable = this.getCharacters('/characters');
   }
 
   ngOnInit() {
+  }
+
+  getCharacters(listPath): Observable<any[]> {
+    return this.db.list(listPath).valueChanges();
   }
 
 }

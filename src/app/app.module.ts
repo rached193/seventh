@@ -9,11 +9,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
 
 /* Core */
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RoutingModule} from './/app-routing.module';
+import {FormsModule} from '@angular/forms';
 
 import {environment} from "../environments/environment";
 
@@ -47,8 +49,10 @@ import {PersonajesComponent} from './personajes/personajes.component';
     AngularFireAuthModule,
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatToolbarModule,
     MatFormFieldModule,
+    MatSelectModule,
     MatInputModule,
     RoutingModule
   ],

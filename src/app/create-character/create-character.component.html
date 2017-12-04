@@ -1,12 +1,51 @@
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
+<div class="container">
+  <form #chart_sheet="ngForm" (ngSubmit)="onSubmit(chart_sheet)">
 
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
+    <div ngModelGroup="basic" class="block">
+      <h1>Informacion de Personaje</h1>
+      <mat-form-field>
+        <input matInput ngModel placeholder="Jugador" name="nombre_jugador" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput ngModel placeholder="Personaje" name="nombre_personaje" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput ngModel placeholder="Concepto" name="concepto">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput ngModel placeholder="Procedencia" name="procedencia" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput ngModel placeholder="Religion" name="religion" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput ngModel placeholder="Riqueza" name="riqueza">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput ngModel placeholder="Reputacion" name="reputacion">
+      </mat-form-field>
+    </div>
+    <div ngModelGroup="characteristics" class="block">
+      <h1>Caracteristicas</h1>
+      <mat-form-field>
+        <input type="number" matInput ngModel placeholder="Musculo" name="musculo" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" matInput ngModel placeholder="Maña" name="maña" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" matInput ngModel placeholder="Brio" name="brio" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" matInput ngModel placeholder="Ingenio" name="ingenio" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="number" matInput ngModel placeholder="Donaire" name="donaire" required>
+      </mat-form-field>
+    </div>
 
+    <button type="submit" [disabled]="chart_sheet.invalid" class="btn btn-success">Submit</button>
+
+  </form>
 
 </div>
-

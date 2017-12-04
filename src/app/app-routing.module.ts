@@ -8,10 +8,10 @@ import {PersonajesComponent} from './personajes/personajes.component';
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'course', component: CoursesListComponent},
-  {path: 'create', component: CreateCharacterComponent},
-  {path: 'list', component: PersonajesComponent}
+  {path: '', component: HomeComponent, pathMatch: 'full'},
+  {path: 'course', component: CoursesListComponent, pathMatch: 'full'},
+  {path: 'create', component: CreateCharacterComponent, pathMatch: 'full'},
+  {path: 'list', component: PersonajesComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

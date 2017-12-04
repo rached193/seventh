@@ -1,50 +1,50 @@
-<div class="ficha" *ngFor="let item of listado">
+<div class="ficha" *ngFor="let item of charactersObservable | async">
 
 
   <div class="quarter">
-    <h2>{{item.basica.personaje}}</h2>
-    <p>{{item.historia}}</p>
+    <h2>{{item.basic.nombre_personaje}}</h2>
+    <p>{{item.des}}</p>
   </div>
   <div class="quarter">
-    <h2>Habilidades Basicas</h2>
+    <h2>Informacion Basica</h2>
     <div class="quarter-content">
       <div>
         <span>Jugador: </span>
-        <span>{{item.basica.jugador}} </span>
+        <span>{{item.basic.nombre_jugador}} </span>
       </div>
       <div>
         <span>Nacion: </span>
-        <span>{{item.basica.nacion}}</span>
+        <span>{{item.basic.procedencia}}</span>
       </div>
       <div>
         <span>Religion: </span>
-        <span>{{item.basica.religion}}</span>
+        <span>{{item.basic.religion}}</span>
       </div>
     </div>
   </div>
 
   <div class="quarter">
     <h2>Caracteristicas</h2>
-    <div class="quarter-content">
+    <div  class="quarter-content">
       <div>
         <span>Musculo: </span>
-        <i *ngFor="let i of Arr(item.caracteristicas.musculo).fill(1)" class="fa fa-dot-circle-o"></i>
+        <i *ngFor="let i of Arr(item.characteristics.musculo).fill(1)" class="fa fa-dot-circle-o"></i>
       </div>
       <div>
         <span>Maña: </span>
-        <i *ngFor="let i of Arr(item.caracteristicas.manya).fill(1)" class="fa fa-dot-circle-o"></i>
+        <i *ngFor="let i of Arr(item.characteristics.manya).fill(1)" class="fa fa-dot-circle-o"></i>
       </div>
       <div>
         <span>Brio: </span>
-        <i *ngFor="let i of Arr(item.caracteristicas.brio).fill(1)" class="fa fa-dot-circle-o"></i>
+        <i *ngFor="let i of Arr(item.characteristics.brio).fill(1)" class="fa fa-dot-circle-o"></i>
       </div>
       <div>
         <span>Ingenio: </span>
-        <i *ngFor="let i of Arr(item.caracteristicas.ingenio).fill(1)" class="fa fa-dot-circle-o"></i>
+        <i *ngFor="let i of Arr(item.characteristics.ingenio).fill(1)" class="fa fa-dot-circle-o"></i>
       </div>
       <div>
         <span>Donaire: </span>
-        <i *ngFor="let i of Arr(item.caracteristicas.donaire).fill(1)" class="fa fa-dot-circle-o"></i>
+        <i *ngFor="let i of Arr(item.characteristics.donaire).fill(1)" class="fa fa-dot-circle-o"></i>
       </div>
     </div>
   </div>

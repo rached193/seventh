@@ -1,9 +1,21 @@
-.example-container {
+/*.container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
 }
+*/
 
-.example-container > * {
-  width: 100%;
+.container {
+  .block {
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+    }
+  }
 }
