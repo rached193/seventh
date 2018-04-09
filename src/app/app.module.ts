@@ -14,7 +14,7 @@ import {MatSelectModule} from '@angular/material/select';
 /* Core */
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {RoutingModule} from './/app-routing.module';
+import {RoutingModule} from './app-routing.module';
 import {FormsModule} from '@angular/forms';
 
 import {environment} from "../environments/environment";
@@ -53,8 +53,7 @@ import {PersonajesComponent} from './personajes/personajes.component';
     MatToolbarModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule,
-    RoutingModule
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

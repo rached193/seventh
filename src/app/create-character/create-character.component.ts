@@ -22,7 +22,8 @@ export class CreateCharacterComponent implements OnInit {
   onSubmit(f: NgForm) {
     console.log(f.value)
     this.itemRef.push(f.value)
-      .then(_ => console.error("Se guardo con exito"))
+      .then(_ => f.resetForm()
+      )
 
 
   }

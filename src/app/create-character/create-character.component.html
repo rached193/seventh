@@ -3,45 +3,117 @@
 
     <div ngModelGroup="basic" class="block">
       <h1>Informacion de Personaje</h1>
-      <mat-form-field>
-        <input matInput ngModel placeholder="Jugador" name="nombre_jugador" required>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput ngModel placeholder="Personaje" name="nombre_personaje" required>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput ngModel placeholder="Concepto" name="concepto">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput ngModel placeholder="Procedencia" name="procedencia" required>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput ngModel placeholder="Religion" name="religion" required>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput ngModel placeholder="Riqueza" name="riqueza">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput ngModel placeholder="Reputacion" name="reputacion">
-      </mat-form-field>
+      <div>
+        <mat-form-field>
+          <input matInput ngModel placeholder="Jugador" name="nombre_jugador" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput ngModel placeholder="Personaje" name="nombre_personaje" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput ngModel placeholder="Concepto" name="concepto">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput ngModel placeholder="Procedencia" name="procedencia" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput ngModel placeholder="Religion" name="religion" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput ngModel placeholder="Riqueza" name="riqueza">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput ngModel placeholder="Reputacion" name="reputacion">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="block">
+      <h1>Descripcion del personaje</h1>
+      <textarea matInput ngModel placeholder="Descripcion" name="des"></textarea>
     </div>
     <div ngModelGroup="characteristics" class="block">
       <h1>Caracteristicas</h1>
       <mat-form-field>
-        <input type="number" matInput ngModel placeholder="Musculo" name="musculo" required>
+        <input type="number" matInput ngModel="2" min="0" max="5" placeholder="Musculo" name="musculo" required>
       </mat-form-field>
       <mat-form-field>
-        <input type="number" matInput ngModel placeholder="Maña" name="maña" required>
+        <input type="number" matInput ngModel="2" min="0" max="5" placeholder="Maña" name="maña" required>
       </mat-form-field>
       <mat-form-field>
-        <input type="number" matInput ngModel placeholder="Brio" name="brio" required>
+        <input type="number" matInput ngModel="2" min="0"  max="5" placeholder="Brio" name="brio" required>
       </mat-form-field>
       <mat-form-field>
-        <input type="number" matInput ngModel placeholder="Ingenio" name="ingenio" required>
+        <input type="number" matInput ngModel="2" min="0"  max="5" placeholder="Ingenio" name="ingenio" required>
       </mat-form-field>
       <mat-form-field>
-        <input type="number" matInput ngModel placeholder="Donaire" name="donaire" required>
+        <input type="number" matInput ngModel="2" min="0"  max="5" placeholder="Donaire" name="donaire" required>
       </mat-form-field>
+    </div>
+
+    <div ngModelGroup="abilities" class="block">
+      <h1>Habilidades</h1>
+      <div>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Apuntar" name="apuntar" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Armas" name="armas" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Atletismo" name="atletismo" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Conocimiento" name="conocimiento"
+                 required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Convencer" name="convencer" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Empatia" name="empatia" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Equitacion" name="equitacion" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Esconder" name="esconder" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Interpretar" name="interpretar"
+                 required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Intimidar" name="intimidar" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Navegacion" name="navegacion" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Pelear" name="pelar" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Percepcion" name="percepcion" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Robar" name="robar" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Tentar" name="tentar" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input type="number" matInput max="5" min="0" ngModel="0" placeholder="Tacticas de Guerra" name="tacticas"
+                 required>
+        </mat-form-field>
+      </div>
     </div>
 
     <button type="submit" [disabled]="chart_sheet.invalid" class="btn btn-success">Submit</button>

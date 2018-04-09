@@ -51,10 +51,10 @@
 
   <div class="quarter">
     <h2>Habilidades</h2>
-    <div class="quarter-content">
-      <div *ngFor="let key of item.habilidades | keys">
+    <div class="quarter-content coll">
+      <div *ngFor="let key of item.abilities | keys">
         <span>{{key}}: </span>
-        <i *ngFor="let i of Arr(item.habilidades[key]).fill(1)" class="fa fa-dot-circle-o"></i>
+        <i *ngFor="let i of Arr(item.abilities[key]).fill(1)" class="fa fa-dot-circle-o"></i>
       </div>
     </div>
 
